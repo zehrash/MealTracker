@@ -10,12 +10,7 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-
-@property ()
-
-
-
-@property (readonly, strong) NSPersistentContainer *persistentContainer;
+@property (readonly, strong) NSPersistentContainer* persistentContainer;
 
 - (void)saveContext;
 
