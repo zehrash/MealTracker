@@ -8,13 +8,8 @@
 #import <Foundation/Foundation.h>
 
 #import "List.h"
+#import "User.h"
 
-@interface User:NSObject
-    @property NSString *name;
-    @property  NSString *email;
-    @property (atomic, strong) List* userList;
-
-@end
 @implementation User
 
 

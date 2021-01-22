@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E39D71DE25AC6D51005814CF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E39D71DD25AC6D51005814CF /* User.m */; };
-		E39D71DF25AC6D51005814CF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E39D71DD25AC6D51005814CF /* User.m */; };
-		E39D71E025AC6D51005814CF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E39D71DD25AC6D51005814CF /* User.m */; };
 		E39D71E525AC6D74005814CF /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = E39D71E425AC6D74005814CF /* List.m */; };
 		E39D71E625AC6D74005814CF /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = E39D71E425AC6D74005814CF /* List.m */; };
 		E39D71E725AC6D74005814CF /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = E39D71E425AC6D74005814CF /* List.m */; };
@@ -23,7 +20,6 @@
 		E3A055EF25A8818500FE6F7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A055EE25A8818500FE6F7E /* main.m */; };
 		E3A055F925A8818500FE6F7E /* MealTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A055F825A8818500FE6F7E /* MealTrackerTests.m */; };
 		E3A0560425A8818500FE6F7E /* MealTrackerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A0560325A8818500FE6F7E /* MealTrackerUITests.m */; };
-		E3A6EB9D25B1CF1D00A54C87 /* MealInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A6EB9C25B1CF1D00A54C87 /* MealInformationViewController.m */; };
 		E3A6EBA625B1DAC200A54C87 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A6EBA525B1DAC200A54C87 /* ListViewController.m */; };
 		E3D4727B25AF22C7003D71D2 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D4727A25AF22C7003D71D2 /* ProfileViewController.m */; };
 		E3D4728A25AF2413003D71D2 /* AddMealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D4728925AF2413003D71D2 /* AddMealViewController.m */; };
@@ -47,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E370321225BAC5A000854230 /* UserController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserController.m; sourceTree = "<group>"; };
+		E370321725BACD6300854230 /* EnumConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumConstants.h; sourceTree = "<group>"; };
+		E370321825BACE7900854230 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		E39D71D325AC646B005814CF /* Meal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Meal.m; path = ../Meal.m; sourceTree = "<group>"; };
 		E39D71DD25AC6D51005814CF /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		E39D71E425AC6D74005814CF /* List.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
@@ -124,6 +123,8 @@
 		E39D71EC25AC702C005814CF /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				E370321225BAC5A000854230 /* UserController.m */,
+				E370321725BACD6300854230 /* EnumConstants.h */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -196,6 +197,7 @@
 				E39D71E425AC6D74005814CF /* List.m */,
 				E3D4726A25AEFDE7003D71D2 /* Meal.h */,
 				E3D4727825AF0F2B003D71D2 /* List.h */,
+				E370321825BACE7900854230 /* User.h */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -330,10 +332,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3A055EF25A8818500FE6F7E /* main.m in Sources */,
-				E39D71DE25AC6D51005814CF /* User.m in Sources */,
 				E3A6EBA625B1DAC200A54C87 /* ListViewController.m in Sources */,
 				E3D4727B25AF22C7003D71D2 /* ProfileViewController.m in Sources */,
-				E3A6EB9D25B1CF1D00A54C87 /* MealInformationViewController.m in Sources */,
 				E3A055E125A8818400FE6F7E /* ViewController.m in Sources */,
 				E3A055DB25A8818400FE6F7E /* AppDelegate.m in Sources */,
 				E3A055DE25A8818400FE6F7E /* SceneDelegate.m in Sources */,
@@ -349,7 +349,6 @@
 			files = (
 				E3A055F925A8818500FE6F7E /* MealTrackerTests.m in Sources */,
 				E39D71E625AC6D74005814CF /* List.m in Sources */,
-				E39D71DF25AC6D51005814CF /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +358,6 @@
 			files = (
 				E3A0560425A8818500FE6F7E /* MealTrackerUITests.m in Sources */,
 				E39D71E725AC6D74005814CF /* List.m in Sources */,
-				E39D71E025AC6D51005814CF /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

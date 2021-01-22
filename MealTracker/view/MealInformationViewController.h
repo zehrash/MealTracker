@@ -13,12 +13,19 @@ NS_ASSUME_NONNULL_BEGIN
     
     UIDatePicker *datePicker;
 }
-@property (weak, nonatomic) IBOutlet UIButton *btnOutlet;
+
+@property (weak, nonatomic) IBOutlet UITextField *titleOutlet;
+@property (weak, nonatomic) IBOutlet UIButton *optionsButton;
+//@property (weak, nonatomic) IBOutlet UITextField *dateTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *ingredientsOutlet;
 @property (weak, nonatomic) IBOutlet UITableView *mealTypeTable;
+
+@property (weak, nonatomic) IBOutlet UITextField *servingsOutlet;
+
+
 @property (strong, nonatomic) NSArray *data;
 - (IBAction)onChangeAction:(id)sender;
-@property (weak, nonatomic) IBOutlet UITextField *dateTextField;
-
 @end
 
 NS_ASSUME_NONNULL_END

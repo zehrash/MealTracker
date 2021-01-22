@@ -6,6 +6,7 @@
 //
 
 #import "MealInformationViewController.h"
+#import "UserController.m"
 
 @interface MealInformationViewController ()
 
@@ -16,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UserController *conroller = [[UserController alloc]init];
+    
+    
     self.data=[[NSArray alloc]initWithObjects:@"Lunch",@"Dinner",nil];
     self.mealTypeTable.delegate=self;
     self.mealTypeTable.dataSource=self;
