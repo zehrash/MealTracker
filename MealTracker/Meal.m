@@ -11,10 +11,10 @@
 @implementation Meal
 
 - (instancetype)initWithTitle:(NSString *)title
-                       type:(enum EnumConstants ) type//wtf, confusion// how to make enum of type MealType
+                       type:( MealType) type
                        ingredients:(NSArray *)ingredients
-                       date:(NSDate *)students
-                 numberOfServings:(int *)numberOfServings;{
+                       date:(NSDate *)date
+                 numberOfServings:(int )numberOfServings;{
     self = [super init];
     if (self) {
         _title = title;
@@ -24,7 +24,7 @@
         _numberOfServings = numberOfServings;
     }
     return self;
-
+}
         
 @end
 

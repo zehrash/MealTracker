@@ -10,8 +10,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AddMealViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIButton *addMealButton;
-@property (weak, nonatomic) IBOutlet UIButton *chooseButton;
 
 @end
 

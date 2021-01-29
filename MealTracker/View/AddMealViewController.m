@@ -7,8 +7,12 @@
 
 #import "AddMealViewController.h"
 #import "MealInformationViewController.h"
+#import "ChooseMealViewCont  roller.h"
 
 @interface AddMealViewController ()
+
+- (IBAction)onAddMealButtonTap:(id)sender;
+- (IBAction)onChooseFromListButtonTap:(id)sender;
 
 @end
 
@@ -19,21 +23,20 @@
     [super viewDidLoad];
 
 }
-- (IBAction)onDoneButtonTap:(id)sender {
+- (IBAction)onChooseFromListButtonTap:(id)sender {
+    ChooseMealViewController *selectionView =[[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"ChooseMealViewControllerID"];
+    [self
+    presentViewController:
+    selectionView animated: true
+    completion: nil];
+}
+
+- (IBAction)onAddMealButtonTap:(id)sender {
     MealInformationViewController *mealView = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"MealInformationViewControllerID"];
     [self
     presentViewController:
     mealView animated: true
     completion: nil];
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
