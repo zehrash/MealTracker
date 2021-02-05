@@ -9,8 +9,8 @@
 #define Header_h
 
 typedef NS_ENUM(NSInteger,MealType)  {
-    MealTypeLUNCH = 0,
-    MealTypeDINNER
+    MealTypeLunch = 1,
+    MealTypeDinner
 };
 
 #endif /* Header_h */

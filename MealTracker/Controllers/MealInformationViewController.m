@@ -6,8 +6,9 @@
 //
 
 #import "MealInformationViewController.h"
-#import "../controller/UserController.h"
-#import "../controller/EnumConstants.h"
+#import "EnumConstants.h"
+#import "AddMealViewController.h"
+#import "UserController.h"
 @interface MealInformationViewController ()
 //
 - (IBAction)onStepperValueChanged:(UIStepper *)sender;
@@ -20,58 +21,51 @@
 @property (weak, nonatomic) IBOutlet UILabel *servings;
 @property (weak, nonatomic) IBOutlet UIStepper *servingsStepper;
 
-- (IBAction)onDatePickerChange:(UIDatePicker *)sender;
-- (IBAction)onMealTypeButtonTap:(id)sender;
-- (IBAction)onDoneButtonTap:(id)sender;
-
+@property (strong, nonatomic)NSDate *date;
+@property  (nonatomic)int servingsValue;
+@property (nonatomic)NSInteger meal;
+@property (strong, nonatomic)UserController *controller;
+@property (strong, nonatomic)NSArray* ingredients;
 @end
 
 @implementation MealInformationViewController
-NSDate *date;
-int servingsValue;
-MealType meal;
-UserController *controller;
-NSArray* ingredients;
-NSString *title;
+
 
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    controller = [[UserController alloc]init];
+    _controller = [[UserController alloc]init];
 
 }
 
 -(BOOL)validateData{
     
-    if(_titleTextField.text != NULL){
-        title =  _titleTextField.text;
-    }
-    else{
-    //pop-up message to fill the title box
+    if(_titleTextField.text == NULL){
         return false;
+        //pop-up message to fill the title box
     }
     if(_ingredientsTextField.text != NULL){
-        ingredients = [_ingredientsTextField.text componentsSeparatedByString:@","];
+        _ingredients = [_ingredientsTextField.text componentsSeparatedByString:@","];
         
         NSMutableArray *trimmedStrings = [NSMutableArray array];
-        for (NSString *str in ingredients) {
+        for (NSString *str in _ingredients) {
             NSString *trimmedStr = [str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
             [trimmedStrings addObject:trimmedStr];
         }
-        ingredients = trimmedStrings;
+        _ingredients = trimmedStrings;
     }
     else{
     //pop-up message to fill the ingredients box
         return false;
     }
-    if(date.description==NULL){
+    if(_date.description==NULL){
     //pop-up message to choose date
         return false;
     }
     
-    if(servingsValue == 0){
+    if(_servingsValue == 0){
         //pop-up message to choose date
             return false;
     }
@@ -79,37 +73,43 @@ NSString *title;
 }
  
 
-- (IBAction)onDoneButtonTap:(id)sender {
-    
-    if([self validateData]){
-      Meal* newMeal = [controller getMealInfo:(title) joiningArgument2:(meal) joiningArgument3:(ingredients) joiningArgument4:(date) joiningArgument5:(servingsValue)];
-        [controller addMealToList:(newMeal)];
-    }
-    else{
-        //alert message for wrong or not full data
-    }
-    
-    
-    
+- (IBAction)onBackButtonTap:(id)sender {
+    AddMealViewController *view =[[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"AddMealViewControllerID"];
+    [self
+    presentViewController:
+    view animated: true
+    completion: nil];
 }
 
+- (IBAction)onDoneButtonTap:(id)sender {
+    if([self validateData]){
+        Meal* newMeal = [_controller getMealInfo:(_titleTextField.text)
+                                joiningArgument2:(_meal) joiningArgument3:(_ingredients)
+                                joiningArgument4:(_date) joiningArgument5:(_servingsValue)];
+        [_controller addMealToList:(newMeal)];
+        [_controller getMealList:MealTypeLunch];
+    }
+    //else{
+        //alert message for wrong or not full data
+    //}
+    
+}
 - (IBAction)onMealTypeButtonTap:(id)sender {
     if(_mealType.selectedSegmentIndex == 0){
-        meal = MealTypeLUNCH;
+        _meal = MealTypeLunch;
     }
     else{
-        meal = MealTypeDINNER;
+        _meal = MealTypeDinner;
     }
 }
 
 - (IBAction)onDatePickerChange:(UIDatePicker *)sender {
-    date = sender.date;
-    //format date
+    _date = sender.date;
 }
 
 - (IBAction)onStepperValueChanged:(UIStepper *)sender {
     int val = [sender value];
-    servingsValue = val;
+    _servingsValue = val;
     [_servings setText:[NSString stringWithFormat:@"Number of servings: %d", val]];
 }
 @end

@@ -9,15 +9,14 @@
 
 @interface Meal:NSObject
     @property(atomic, readwrite) NSString *title;
-    @property (atomic, readwrite) MealType type;
+    @property (atomic, readwrite) NSInteger type;
     @property (atomic, readwrite) NSArray *ingredients;
     @property (atomic, readwrite) NSDate *date;
     @property (atomic, readwrite) int numberOfServings;
 
 
-
 - (instancetype)initWithTitle:(NSString *)title
-                        type:( MealType ) type//wtf, confusion// how to make enum of type MealType
+                        type:( NSInteger ) type
                   ingredients:(NSArray *)ingredients
                   date:(NSDate *)date
             numberOfServings:(int)numberOfServings;

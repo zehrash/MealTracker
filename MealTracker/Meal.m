@@ -11,17 +11,17 @@
 @implementation Meal
 
 - (instancetype)initWithTitle:(NSString *)title
-                       type:( MealType) type
+                       type:( NSInteger ) type
                        ingredients:(NSArray *)ingredients
                        date:(NSDate *)date
                  numberOfServings:(int )numberOfServings;{
     self = [super init];
     if (self) {
-        _title = title;
-        _type = type;
-        _ingredients = ingredients;
-        _date = date;
-        _numberOfServings = numberOfServings;
+        self.title = title;
+        self.type = type;
+        self.ingredients = ingredients;
+        self.date = date;
+        self.numberOfServings = numberOfServings;
     }
     return self;
 }

@@ -10,6 +10,10 @@
 		E350526C25BB28B500914D9B /* MealInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A6EB9C25B1CF1D00A54C87 /* MealInformationViewController.m */; };
 		E354FC3C25C192E4008060B6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E39D71DD25AC6D51005814CF /* User.m */; };
 		E354FC4325C412E4008060B6 /* ChooseMealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E354FC4225C412E4008060B6 /* ChooseMealViewController.m */; };
+		E36F17EB25CC41330057B707 /* DinnerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E36F17EA25CC41330057B707 /* DinnerListViewController.m */; };
+		E36F17F225CC46B10057B707 /* LunchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A6EBA525B1DAC200A54C87 /* LunchListViewController.m */; };
+		E36F17FE25CD44180057B707 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E36F17FD25CD44180057B707 /* LoginViewController.m */; };
+		E36F182025CD71610057B707 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D4727A25AF22C7003D71D2 /* ProfileViewController.m */; };
 		E37F243A25BF17230094E3EF /* UserController.m in Sources */ = {isa = PBXBuildFile; fileRef = E370321225BAC5A000854230 /* UserController.m */; };
 		E37F244225C0194E0094E3EF /* Meal.m in Sources */ = {isa = PBXBuildFile; fileRef = E39D71D325AC646B005814CF /* Meal.m */; };
 		E39D71E525AC6D74005814CF /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = E39D71E425AC6D74005814CF /* List.m */; };
@@ -25,8 +29,6 @@
 		E3A055EF25A8818500FE6F7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A055EE25A8818500FE6F7E /* main.m */; };
 		E3A055F925A8818500FE6F7E /* MealTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A055F825A8818500FE6F7E /* MealTrackerTests.m */; };
 		E3A0560425A8818500FE6F7E /* MealTrackerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A0560325A8818500FE6F7E /* MealTrackerUITests.m */; };
-		E3A6EBA625B1DAC200A54C87 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A6EBA525B1DAC200A54C87 /* ListViewController.m */; };
-		E3D4727B25AF22C7003D71D2 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D4727A25AF22C7003D71D2 /* ProfileViewController.m */; };
 		E3D4728A25AF2413003D71D2 /* AddMealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D4728925AF2413003D71D2 /* AddMealViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,10 @@
 /* Begin PBXFileReference section */
 		E354FC4125C412E4008060B6 /* ChooseMealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseMealViewController.h; sourceTree = "<group>"; };
 		E354FC4225C412E4008060B6 /* ChooseMealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseMealViewController.m; sourceTree = "<group>"; };
+		E36F17E925CC41330057B707 /* DinnerListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DinnerListViewController.h; sourceTree = "<group>"; };
+		E36F17EA25CC41330057B707 /* DinnerListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DinnerListViewController.m; sourceTree = "<group>"; };
+		E36F17FC25CD44180057B707 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		E36F17FD25CD44180057B707 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		E370321225BAC5A000854230 /* UserController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserController.m; sourceTree = "<group>"; };
 		E370321725BACD6300854230 /* EnumConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumConstants.h; sourceTree = "<group>"; };
 		E370321825BACE7900854230 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -78,8 +84,8 @@
 		E3A0560525A8818500FE6F7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3A6EB9B25B1CF1D00A54C87 /* MealInformationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealInformationViewController.h; sourceTree = "<group>"; };
 		E3A6EB9C25B1CF1D00A54C87 /* MealInformationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealInformationViewController.m; sourceTree = "<group>"; };
-		E3A6EBA425B1DAC200A54C87 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
-		E3A6EBA525B1DAC200A54C87 /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		E3A6EBA425B1DAC200A54C87 /* LunchListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LunchListViewController.h; sourceTree = "<group>"; };
+		E3A6EBA525B1DAC200A54C87 /* LunchListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LunchListViewController.m; sourceTree = "<group>"; };
 		E3D4726A25AEFDE7003D71D2 /* Meal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Meal.h; sourceTree = "<group>"; };
 		E3D4727825AF0F2B003D71D2 /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		E3D4727925AF22C7003D71D2 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
@@ -113,7 +119,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E39D71EB25AC7002005814CF /* View */ = {
+		E39D71EB25AC7002005814CF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				E3D4727925AF22C7003D71D2 /* ProfileViewController.h */,
@@ -122,12 +128,16 @@
 				E3D4728925AF2413003D71D2 /* AddMealViewController.m */,
 				E3A6EB9B25B1CF1D00A54C87 /* MealInformationViewController.h */,
 				E3A6EB9C25B1CF1D00A54C87 /* MealInformationViewController.m */,
-				E3A6EBA425B1DAC200A54C87 /* ListViewController.h */,
-				E3A6EBA525B1DAC200A54C87 /* ListViewController.m */,
+				E3A6EBA425B1DAC200A54C87 /* LunchListViewController.h */,
+				E3A6EBA525B1DAC200A54C87 /* LunchListViewController.m */,
 				E354FC4125C412E4008060B6 /* ChooseMealViewController.h */,
 				E354FC4225C412E4008060B6 /* ChooseMealViewController.m */,
+				E36F17E925CC41330057B707 /* DinnerListViewController.h */,
+				E36F17EA25CC41330057B707 /* DinnerListViewController.m */,
+				E36F17FC25CD44180057B707 /* LoginViewController.h */,
+				E36F17FD25CD44180057B707 /* LoginViewController.m */,
 			);
-			path = View;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		E39D71EC25AC702C005814CF /* Controller */ = {
@@ -164,7 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				E39D71EC25AC702C005814CF /* Controller */,
-				E39D71EB25AC7002005814CF /* View */,
+				E39D71EB25AC7002005814CF /* Controllers */,
 				E3A0561525A88EE100FE6F7E /* Model */,
 				E3A055D925A8818400FE6F7E /* AppDelegate.h */,
 				E3A055DA25A8818400FE6F7E /* AppDelegate.m */,
@@ -344,16 +354,18 @@
 			files = (
 				E354FC3C25C192E4008060B6 /* User.m in Sources */,
 				E3A055EF25A8818500FE6F7E /* main.m in Sources */,
-				E3A6EBA625B1DAC200A54C87 /* ListViewController.m in Sources */,
-				E3D4727B25AF22C7003D71D2 /* ProfileViewController.m in Sources */,
+				E36F182025CD71610057B707 /* ProfileViewController.m in Sources */,
 				E3A055E125A8818400FE6F7E /* ViewController.m in Sources */,
 				E354FC4325C412E4008060B6 /* ChooseMealViewController.m in Sources */,
 				E37F244225C0194E0094E3EF /* Meal.m in Sources */,
 				E3A055DB25A8818400FE6F7E /* AppDelegate.m in Sources */,
+				E36F17FE25CD44180057B707 /* LoginViewController.m in Sources */,
 				E37F243A25BF17230094E3EF /* UserController.m in Sources */,
+				E36F17F225CC46B10057B707 /* LunchListViewController.m in Sources */,
 				E3A055DE25A8818400FE6F7E /* SceneDelegate.m in Sources */,
 				E39D71E525AC6D74005814CF /* List.m in Sources */,
 				E3A055E725A8818400FE6F7E /* MealTracker.xcdatamodeld in Sources */,
+				E36F17EB25CC41330057B707 /* DinnerListViewController.m in Sources */,
 				E350526C25BB28B500914D9B /* MealInformationViewController.m in Sources */,
 				E3D4728A25AF2413003D71D2 /* AddMealViewController.m in Sources */,
 			);

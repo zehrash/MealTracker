@@ -1,5 +1,5 @@
 //
-//  ListViewController.h
+//  MealInformationViewController.h
 //  MealTracker
 //
 //  Created by Zehra Iliyaz on 15.01.21.
@@ -9,7 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ListViewController : UIViewController
+@interface MealInformationViewController : UIViewController<UITableViewDelegate>
+    
+
 
 @end
 

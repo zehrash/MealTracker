@@ -10,18 +10,13 @@
 
 #import "User.h"
 
-
-
 @implementation User
 
-
-- (instancetype)initWithName:(NSString *)name
-                  email:(NSString *)email {
+- (instancetype)initWithName:(NSString *)name{
     self = [super init];
     if (self) {
-        _name = name;
-        _email = email;
-        _userList = [[List alloc] initWithList: [[NSMutableArray alloc] init]
+        self.name = name;
+        self.userList = [[List alloc] initWithList: [[NSMutableArray alloc] init]
                                     dinnerList:[[NSMutableArray alloc] init]
                                    defaultList:[[NSMutableArray alloc] init]];
 
@@ -31,24 +26,23 @@
 }
 
 -(void) addMeal:(Meal* ) meal{
-    
-    if(meal.type==MealTypeLUNCH){
+  
+    if(meal.type==MealTypeLunch){
         [_userList.lunchList addObject:meal];
     }
     else{
         [_userList.dinnerList addObject:meal];
     }
 }
+
 -(NSMutableArray*)getMealList: (MealType)type{
-    if(type==MealTypeLUNCH){
+    if(type==MealTypeLunch){
         return _userList.lunchList;
     }
     else{
         return _userList.dinnerList;
     }
 }
-
-
 
 @end
 

@@ -6,15 +6,16 @@
 //
 
 #import "Meal.h"
-
-@interface UserController :NSObject
-
+#import "User.h"
+@interface UserController : NSObject
+@property (strong,nonatomic)User *user;
 -(void) addMealToList:(Meal*)meal;
--(NSMutableArray*) showMealList:(MealType)type;
+-(NSMutableArray*) getMealList:(MealType)type;
+-(void )createUser:(NSString*)name;
+-(User*)getUser;
 -(Meal*)getMealInfo: ( NSString* )title
-   joiningArgument2:(  MealType )mealType
+   joiningArgument2:(  NSInteger )mealType
    joiningArgument3: (NSArray* ) ingredients
    joiningArgument4: (NSDate* ) date
    joiningArgument5:( int )numberOfServings;
-
 @end

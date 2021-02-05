@@ -14,9 +14,9 @@
                   defaultList:(NSMutableArray *)defaultList;{
     self = [super init];
     if (self) {
-        _lunchList = lunchList;
-        _dinnerList = dinnerList;
-        _defaultList = defaultList;
+        self.lunchList = lunchList;
+        self.dinnerList = dinnerList;
+        self.defaultList = defaultList;
     }
     return self;
 }

@@ -6,65 +6,44 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Meal.h"
-#import "User.h"
 #import "UserController.h"
 
+@class Meal;
 @implementation UserController
 
-User *user;
+
 -(Meal  *) getMealInfo:( NSString* )title
-    joiningArgument2:(MealType )type
+    joiningArgument2:(NSInteger )type
     joiningArgument3: (NSArray* ) ingredients
     joiningArgument4: (NSDate* ) date
     joiningArgument5:( int )numberOfServings {
    
-    Meal *meal = [[Meal alloc] initWithTitle:  title
+    Meal *meal = [[Meal alloc] initWithTitle:title
                                type:type
                                ingredients:ingredients
                                date:date
                                numberOfServings: numberOfServings];
-    
     return meal;
 
 }
--(void )createUser:(NSString*)name
-           withArg2:(NSString*)email{
-    
-    user = [[User alloc] initWithName: name
-                                      email:email];
+-(void )createUser:(NSString*)name{
+   self.user = [[User alloc] initWithName: name];
 }
- 
-
 
 -(void) addMealToList:(Meal*) meal{
     
+    [self.user addMeal:meal];
     
-    [user addMeal:meal];
     //return pop-up message if adding was succesful
     
 }
 
--(NSMutableArray*) showMealList:(MealType)type{
+-(NSMutableArray*) getMealList:(MealType)type{
     NSMutableArray* list = [[NSMutableArray alloc]init];
-    list = [user getMealList:type];
-    
-    for (Meal *curMeal in list){
-       // Assuming you want to print the 'count' property and it's int
-       NSLog(@"%@", curMeal.title);
-
-       // You can, of course, use any other field (or several of them)
-    }
+    list = [self.user getMealList:type];
     return list;
-
 }
-//-(NSMutableArray* ) showAllMeals{
-    
-    //call method to getAllMeals from user class
-    
-//}
-
-
-
-
+-(User*)getUser{
+    return _user;
+}
 @end
