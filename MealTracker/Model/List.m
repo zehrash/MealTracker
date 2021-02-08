@@ -9,7 +9,7 @@
 #import "List.h"
 @implementation List
 
-- (instancetype)initWithList:(NSMutableArray *)lunchList
+- (instancetype)initWithLunchList:(NSMutableArray *)lunchList
                   dinnerList:(NSMutableArray *)dinnerList
                   defaultList:(NSMutableArray *)defaultList;{
     self = [super init];

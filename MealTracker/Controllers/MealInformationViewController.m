@@ -10,9 +10,6 @@
 #import "AddMealViewController.h"
 #import "UserController.h"
 @interface MealInformationViewController ()
-//
-- (IBAction)onStepperValueChanged:(UIStepper *)sender;
-
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UIButton *optionsButton;
 @property (weak, nonatomic) IBOutlet UITextField *dateTextField;
@@ -30,16 +27,18 @@
 
 @implementation MealInformationViewController
 
-
+UIBarButtonItem *backButton;
+- (IBAction)backButtonPressed:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _controller = [[UserController alloc]init];
-
+  
 }
-
 -(BOOL)validateData{
     
     if(_titleTextField.text == NULL){
@@ -74,18 +73,24 @@
  
 
 - (IBAction)onBackButtonTap:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+    
+    /*
     AddMealViewController *view =[[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"AddMealViewControllerID"];
     [self
     presentViewController:
     view animated: true
     completion: nil];
+     */
 }
 
 - (IBAction)onDoneButtonTap:(id)sender {
     if([self validateData]){
-        Meal* newMeal = [_controller getMealInfo:(_titleTextField.text)
-                                joiningArgument2:(_meal) joiningArgument3:(_ingredients)
-                                joiningArgument4:(_date) joiningArgument5:(_servingsValue)];
+        Meal* newMeal = [_controller getMealInfo:_titleTextField.text
+                                joiningArgument2:_meal
+                                joiningArgument3:_ingredients
+                                joiningArgument4:_date
+                                joiningArgument5:_servingsValue];
         [_controller addMealToList:(newMeal)];
         [_controller getMealList:MealTypeLunch];
     }

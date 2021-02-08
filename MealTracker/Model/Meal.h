@@ -16,9 +16,8 @@
 
 
 - (instancetype)initWithTitle:(NSString *)title
-                        type:( NSInteger ) type
+                        type:( NSInteger )type
                   ingredients:(NSArray *)ingredients
                   date:(NSDate *)date
             numberOfServings:(int)numberOfServings;
-        
 @end

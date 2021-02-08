@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E350526C25BB28B500914D9B /* MealInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A6EB9C25B1CF1D00A54C87 /* MealInformationViewController.m */; };
 		E354FC3C25C192E4008060B6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E39D71DD25AC6D51005814CF /* User.m */; };
 		E354FC4325C412E4008060B6 /* ChooseMealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E354FC4225C412E4008060B6 /* ChooseMealViewController.m */; };
 		E36F17EB25CC41330057B707 /* DinnerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E36F17EA25CC41330057B707 /* DinnerListViewController.m */; };
 		E36F17F225CC46B10057B707 /* LunchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A6EBA525B1DAC200A54C87 /* LunchListViewController.m */; };
 		E36F17FE25CD44180057B707 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E36F17FD25CD44180057B707 /* LoginViewController.m */; };
 		E36F182025CD71610057B707 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D4727A25AF22C7003D71D2 /* ProfileViewController.m */; };
+		E36F182725D181A80057B707 /* MealInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A6EB9C25B1CF1D00A54C87 /* MealInformationViewController.m */; };
 		E37F243A25BF17230094E3EF /* UserController.m in Sources */ = {isa = PBXBuildFile; fileRef = E370321225BAC5A000854230 /* UserController.m */; };
 		E37F244225C0194E0094E3EF /* Meal.m in Sources */ = {isa = PBXBuildFile; fileRef = E39D71D325AC646B005814CF /* Meal.m */; };
 		E39D71E525AC6D74005814CF /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = E39D71E425AC6D74005814CF /* List.m */; };
@@ -366,7 +366,7 @@
 				E39D71E525AC6D74005814CF /* List.m in Sources */,
 				E3A055E725A8818400FE6F7E /* MealTracker.xcdatamodeld in Sources */,
 				E36F17EB25CC41330057B707 /* DinnerListViewController.m in Sources */,
-				E350526C25BB28B500914D9B /* MealInformationViewController.m in Sources */,
+				E36F182725D181A80057B707 /* MealInformationViewController.m in Sources */,
 				E3D4728A25AF2413003D71D2 /* AddMealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

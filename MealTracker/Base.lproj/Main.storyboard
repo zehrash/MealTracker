@@ -50,6 +50,7 @@
                                 </state>
                                 <connections>
                                     <action selector="onAddMealButtonTap:" destination="pag-w0-Zou" eventType="touchUpInside" id="djF-Fg-sLm"/>
+                                    <segue destination="Sxy-Dm-TJ3" kind="show" id="IMC-WD-ZrZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EKU-aj-7TM">
@@ -68,6 +69,7 @@
                                 </state>
                                 <connections>
                                     <action selector="onChooseFromListButtonTap:" destination="pag-w0-Zou" eventType="touchUpInside" id="uqH-Gr-Uiq"/>
+                                    <segue destination="8GJ-wf-nS0" kind="show" id="hVu-Pj-FQN"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Od-CT-Rq4">
@@ -92,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3S-KA-TX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1376.8115942028987" y="-194.19642857142856"/>
+            <point key="canvasLocation" x="1417" y="-176"/>
         </scene>
         <!--Profile-->
         <scene sceneID="GYy-t8-KY7">
@@ -147,9 +149,10 @@
         <!--Choose Meal View Controller-->
         <scene sceneID="AdF-cQ-Xei">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9VK-g5-QRd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="ChooseMealViewControllerID" id="8GJ-wf-nS0" customClass="ChooseMealViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gh0-H3-Xno">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -167,17 +170,17 @@
                             <outlet property="delegate" destination="8GJ-wf-nS0" id="piY-ME-9GB"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="ay8-5X-0M6"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9VK-g5-QRd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2364" y="-19"/>
+            <point key="canvasLocation" x="2383" y="14"/>
         </scene>
         <!--Meal Information View Controller-->
         <scene sceneID="f4I-Sj-PIm">
             <objects>
                 <viewController storyboardIdentifier="MealInformationViewControllerID" id="Sxy-Dm-TJ3" customClass="MealInformationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rhx-mW-0QU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="A4G-5f-qvC">
@@ -219,20 +222,6 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PEz-fE-o7c">
-                                <rect key="frame" x="26" y="431" width="350" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Choose date from calendar">
-                                        <attributes>
-                                            <color key="NSColor" red="0.41484231659860316" green="0.41484231659860316" blue="0.41484231659860316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="16" name="ChalkboardSE-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fOq-bs-heD">
                                 <rect key="frame" x="20" y="117" width="374" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -252,22 +241,9 @@
                                 <rect key="frame" x="0.0" y="55" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="MealTracker" id="xca-l3-XHB">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="CTe-3g-sVw">
-                                            <connections>
-                                                <action selector="onBackButtonTap:" destination="Sxy-Dm-TJ3" id="ef8-hS-9g9"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="Title" id="C0C-g0-4dB"/>
                                 </items>
                             </navigationBar>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="FBE-sV-aSc">
-                                <rect key="frame" x="26" y="483" width="347" height="90"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="onDatePickerChange:" destination="Sxy-Dm-TJ3" eventType="valueChanged" id="a1O-OC-fdp"/>
-                                </connections>
-                            </datePicker>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iuX-MK-9aI">
                                 <rect key="frame" x="104" y="206" width="195" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -298,8 +274,15 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="FBE-sV-aSc">
+                                <rect key="frame" x="28" y="447" width="347" height="90"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onDatePickerChange:" destination="Sxy-Dm-TJ3" eventType="valueChanged" id="a1O-OC-fdp"/>
+                                </connections>
+                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68y-jB-xh0">
-                                <rect key="frame" x="161" y="619" width="76" height="60"/>
+                                <rect key="frame" x="163" y="583" width="76" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Done"/>
@@ -312,6 +295,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="twN-DB-VcS"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="ingredientsTextField" destination="TMR-6R-gin" id="1Xt-fo-iLV"/>
@@ -365,8 +349,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="onStartButtonClick:" destination="h9l-3u-RSu" eventType="touchUpInside" id="oI0-Od-AJw"/>
-                                    <segue destination="M6b-Ax-HqK" kind="show" id="Dg5-bb-5u0"/>
+                                    <segue destination="M6b-Ax-HqK" kind="show" id="IpJ-S7-Z4O"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -499,7 +482,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dqz-zK-fAN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1329" y="526"/>
+            <point key="canvasLocation" x="1416" y="526"/>
         </scene>
         <!--Dinner List View Controller-->
         <scene sceneID="FQp-AN-8aL">

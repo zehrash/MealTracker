@@ -16,7 +16,7 @@
     self = [super init];
     if (self) {
         self.name = name;
-        self.userList = [[List alloc] initWithList: [[NSMutableArray alloc] init]
+        self.userList = [[List alloc] initWithLunchList: [[NSMutableArray alloc] init]
                                     dinnerList:[[NSMutableArray alloc] init]
                                    defaultList:[[NSMutableArray alloc] init]];
 

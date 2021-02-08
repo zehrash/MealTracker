@@ -9,7 +9,7 @@
 #import "UserController.h"
 
 @interface LoginViewController ()
-- (IBAction)onStartButtonClick:(id)sender;
+
 @property (strong, nonatomic) UserController* userController;
 @property (weak, nonatomic) IBOutlet UITextField *nicknameTextField;
 

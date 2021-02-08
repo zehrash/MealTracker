@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *mealList;
 @property (strong, nonatomic) NSMutableArray *data;
 @property (strong, nonatomic) UserController *userControll;
-- (IBAction)onMealListTap:(id)sender;
 
 @end
 
@@ -30,19 +29,19 @@
 - (IBAction)onMealListTap:(id)sender {
     
     if(_mealList.selectedSegmentIndex == 1){
-        DinnerListViewController *lunchList =[[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"LunchListViewControllerID"];
+        DinnerListViewController *dinnerList =[[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"DinnerListViewControllerID"];
         [self
         presentViewController:
-        lunchList animated: true
+        dinnerList animated: true
         completion: nil];
     }
 }
 
 -(NSMutableArray* )getLunchList{
 
-    NSMutableArray *arr;
+    NSMutableArray *arr = [[NSMutableArray alloc] init];
     for (Meal *meal in [_userControll getMealList:MealTypeLunch]){
-        arr = [NSMutableArray  arrayWithObjects:  meal.title ,nil];
+        [arr addObject:meal.title];
     }
     return arr;
 }
@@ -53,10 +52,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LunchListItem" forIndexPath:indexPath];
-
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LunchListItem" forIndexPath:indexPath];
     cell.textLabel.text = [_data objectAtIndex:indexPath.row];
-return cell;
+    return cell;
 }
 
 

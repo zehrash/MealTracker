@@ -21,21 +21,24 @@
 
 }
 - (IBAction)onChooseFromListButtonTap:(id)sender {
+    /*
     ChooseMealViewController *selectionViewController =[[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"ChooseMealViewControllerID"];
     [self
     presentViewController:selectionViewController
     animated: true
     completion: nil];
-    
+    */
     
 }
 
 - (IBAction)onAddMealButtonTap:(id)sender {
+    /*
     MealInformationViewController *mealViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"MealInformationViewControllerID"];
     [self
      presentViewController:mealViewController
     animated: true
     completion: nil];
+     */
 }
 
 @end

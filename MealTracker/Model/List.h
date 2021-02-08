@@ -11,7 +11,7 @@
     @property NSMutableArray <Meal *> *dinnerList;
     @property NSMutableArray <Meal *> *defaultList;
 
-- (instancetype)initWithList:(NSMutableArray *)lunchList
+- (instancetype)initWithLunchList:(NSMutableArray *)lunchList
                 dinnerList:(NSMutableArray *)dinnerList
                 defaultList:(NSMutableArray *)defaultList;
     

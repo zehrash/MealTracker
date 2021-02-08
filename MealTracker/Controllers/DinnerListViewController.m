@@ -8,11 +8,11 @@
 #import "DinnerListViewController.h"
 #import "UserController.h"
 #import "LunchListViewController.h"
-@class Meal;
-@interface DinnerListViewController ()
-@property (weak, nonatomic) IBOutlet UISegmentedControl *mealOptions;
+#import "Meal.h"
 
-- (IBAction)onMealListTap:(id)sender;
+@interface DinnerListViewController ()
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *mealOptions;
 @property (strong, nonatomic)NSMutableArray *dinnerData;
 @property (strong, nonatomic)UserController *userController;
 
@@ -27,9 +27,9 @@
 
 -(NSMutableArray* )getDinnerList{
 
-    NSMutableArray *arr;
+    NSMutableArray *arr = [[NSMutableArray alloc] init];
     for (Meal *meal in [_userController getMealList:MealTypeDinner]){
-        arr = [NSMutableArray  arrayWithObjects: meal.title ,nil];
+        [arr addObject:meal.title];
     }
     return arr;
 }
